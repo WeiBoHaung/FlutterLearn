@@ -4,9 +4,15 @@ void main() {
   runApp(MaterialApp(home: MyApp()));
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  int webLevel = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,6 +22,15 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.grey[850],
         centerTitle: true,
         elevation: 0.0,
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          setState(() {
+            webLevel += 1;
+          });
+        },
+        child: Icon(Icons.add),
+        backgroundColor: Colors.grey[800],
       ),
       body: Padding(
         padding: EdgeInsets.all(20.0),
@@ -66,7 +81,7 @@ class MyApp extends StatelessWidget {
               height: 10.0,
             ),
             Text(
-              "8",
+              "$webLevel",
               style: TextStyle(
                 color: Colors.amberAccent[200],
                 fontSize: 30.0,
