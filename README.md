@@ -2,7 +2,7 @@
 
 ###### tags:`flutter`
 
-## 不醋的教學影片
+## 不錯的教學影片
 1. [20 分鐘快速學會 Flutter 基礎入門 
 ](https://youtu.be/n8eY4qb7Dgw?si=OIu_23KhsVv8_Dij)
     從基本環境安裝到一個頁面傳資料到下一個頁面。
